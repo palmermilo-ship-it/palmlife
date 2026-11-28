@@ -409,7 +409,8 @@ footer .legal { flex: 1 1 100%; margin: 0; font: 13px var(--body); color: #5f596
 @media (max-width: 760px) {
   .stickybar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: rgba(6,5,11,.95); border-top: 1px solid var(--line); transform: translateY(110%); transition: transform .3s; }
   .stickybar.show { transform: none; }
-  .stickybar .btn { flex: 1; padding: 13px 16px; font-size: 15px; }
+  .stickybar .btn { flex: 1 1 auto; padding: 13px 16px; font-size: 15px; white-space: nowrap; }
+  .stickybar .btn.trial-link { flex: 0 0 auto; padding: 13px 22px; }
   .hero .copy { padding-top: 44px; }
 }
 @media (prefers-reduced-motion: reduce) {
