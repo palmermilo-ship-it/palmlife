@@ -83,6 +83,26 @@
    }
   },
   {
+   "@type": "SoftwareApplication",
+   "@id": "https://nightfinaudio.com/#nightroll",
+   "name": "NightRoll",
+   "applicationCategory": "MultimediaApplication",
+   "applicationSubCategory": "MIDI piano roll plug-in (VST3, AU)",
+   "operatingSystem": "Windows 10, Windows 11, macOS 11 or later",
+   "softwareVersion": "1.0.0",
+   "description": "NightRoll is a free piano roll plug-in by NightFin: draw MIDI, snap to a key and scale, then drag it into your DAW as a clip or play it live into any instrument. VST3 and AU for Windows and Mac.",
+   "screenshot": "https://nightfinaudio.com/assets/img/nightroll-1560.webp",
+   "url": "https://nightfinaudio.com/#nightroll",
+   "author": {
+    "@id": "https://nightfinaudio.com/#nightfin"
+   },
+   "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "GBP"
+   }
+  },
+  {
    "@type": "VideoObject",
    "@id": "https://nightfinaudio.com/#demo",
    "name": "Palm Life: 80s reverb plug-in, one-minute demo",
@@ -315,6 +335,19 @@ img, video { max-width: 100%; }
 .orbit .ring .spin::after { content: ""; position: absolute; left: 111px; top: -9px; width: 18px; height: 18px; border-radius: 50%; background: var(--sun); box-shadow: 0 0 26px 6px rgba(246,160,106,.7); }
 @keyframes spin { to { transform: rotate(360deg); } }
 .orbit > div:last-child { flex: 1 1 380px; }
+
+/* NightRoll (free piano roll). Uses NightRoll's own indigo accent. */
+.nroll { margin-top: 28px; border-radius: 24px; border: 1px solid var(--line); background: radial-gradient(ellipse at 80% 0%, #161a33, var(--card) 60%); padding: clamp(28px, 5vw, 64px); }
+.nroll .ch-k { color: #8b93ff; }
+.nroll .nr-head { max-width: 760px; }
+.nroll .nr-shot { margin: 32px 0 0; }
+.nroll .nr-shot img { display: block; width: 100%; height: auto; border-radius: 14px; border: 1px solid #23262e; box-shadow: 0 30px 80px rgba(0,0,0,.55), 0 0 0 1px rgba(139,147,255,.08); }
+.nroll .nr-foot { margin-top: 36px; display: flex; flex-wrap: wrap; gap: 32px 56px; align-items: flex-start; }
+.nroll ul.nr-list { flex: 2 1 460px; margin: 0; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px 32px; }
+.nroll ul.nr-list li { color: var(--ink-2); font-size: 15.5px; } .nroll ul.nr-list strong { display: block; color: #fff; font-weight: 600; margin-bottom: 2px; }
+.nroll .nr-get { flex: 1 1 260px; }
+.nroll .nr-dl { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 14px; }
+.btn.nr { background: #8b93ff; color: #0b0c0f; } .btn.nr:hover { color: #0b0c0f; transform: translateY(-2px); box-shadow: 0 12px 34px rgba(139,147,255,.4); }
 
 /* presets */
 .presets-box { margin-top: 36px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
@@ -620,6 +653,35 @@ footer .legal { flex: 1 1 100%; margin: 0; font: 13px var(--body); color: #5f596
           <a class="btn solid trial-link" href="#try">Download Orbit free</a>
         </div>
       </div>
+      <div class="nroll" id="nightroll">
+        <div class="nr-head">
+          <p class="ch-k">NIGHTROLL · FREE FOR EVERYONE</p>
+          <h2 style="margin-top:12px">NightRoll: a fast piano roll inside your DAW.</h2>
+          <p class="intro">Draw MIDI in a clean, quick piano roll, then drag it into your DAW as a clip, or play it live into any instrument in time with your song.</p>
+        </div>
+        <figure class="nr-shot">
+          <img src="assets/img/nightroll-1560.webp"
+               srcset="assets/img/nightroll-720.webp 720w, assets/img/nightroll-1040.webp 1040w, assets/img/nightroll-1560.webp 1560w, assets/img/nightroll-2080.webp 2080w"
+               sizes="(max-width: 1240px) 90vw, 1100px" width="1560" height="947" loading="lazy" decoding="async"
+               alt="NightRoll: a piano roll with notes in C minor, a velocity lane and a Drag MIDI button">
+        </figure>
+        <div class="nr-foot">
+          <ul class="nr-list">
+            <li><strong>Drag MIDI</strong>Drag the pattern, or just the notes you picked, straight onto a track.</li>
+            <li><strong>Plays any instrument</strong>Send it live to Omnisphere, Serum or any synth on another track.</li>
+            <li><strong>Stays in key</strong>Snap to a scale, change the key and every note follows, transpose in one click.</li>
+            <li><strong>Quick to edit</strong>Draw, paint, slice, loop a section, velocity, quantize and undo.</li>
+          </ul>
+          <div class="nr-get">
+            <p class="intro" style="margin:0"><strong style="color:#fff">Free for good.</strong> No licence key, no card, no account.</p>
+            <div class="nr-dl">
+              <a class="btn nr" href="https://raw.githubusercontent.com/NightfinAudio/palm-life-updates/main/builds/NightRoll-1.0.0-Windows.zip">Download for Windows</a>
+              <a class="btn ghost" href="https://raw.githubusercontent.com/NightfinAudio/palm-life-updates/main/builds/NightRoll-1.0.0-Mac.zip">Download for Mac</a>
+            </div>
+            <p class="small" style="margin-top:14px">Version 1.0.0 · Windows 10/11: VST3 and standalone · macOS 11+: VST3, AU and standalone</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -790,6 +852,7 @@ footer .legal { flex: 1 1 100%; margin: 0; font: 13px var(--body); color: #5f596
       <p class="ch-k">FAQ</p>
       <h2 id="faq-title">Questions.</h2>
       <div class="faq">
+        <details><summary>What is NightRoll?</summary><p>A free piano roll plug-in by NightFin, for anyone, with or without Palm Life. Put it on a MIDI track, draw your notes, then drag the Drag MIDI button onto any track to get a normal MIDI clip. To play an instrument live, put NightRoll on its own MIDI track; on your instrument's track set MIDI From to that track, pick NightRoll in the box under it and set Monitor to In. It snaps to a key and scale, moves your notes when you change key, and has a loop selector, velocity lane and slice tool. <a href="#nightroll">Download it here.</a></p></details>
         <details><summary>What is Orbit?</summary><p>A free 3D panner for everyone, even if you never buy Palm Life. It comes in the Palm Life download (<a href="#try">get it here</a>): run the installer, leave Orbit ticked, and add Orbit to a track in your DAW. It needs no licence key and keeps working after the trial ends. On headphones it moves a sound round your head, in front, behind and above, and can follow your song's tempo. It uses a recorded dummy head by default; you can load your own head measurement (.sofa) and a correction for your headphones (an AutoEq profile).</p></details>
         <details><summary>Is there a free trial?</summary><p>Yes. <a href="#try">Download Palm Life</a> and you get the full plug-in for 14 days, with no card and no account. After that it keeps working but drops out for a moment every 45 seconds until you enter a licence key.</p></details>
         <details><summary>Which DAWs work?</summary><p>Any DAW that loads VST3 or, on a Mac, Audio Units: Logic Pro, GarageBand, Ableton Live, FL Studio, Reaper, Cubase, Studio One and Bitwig. There’s also a standalone app if you just want to play through it.</p></details>
